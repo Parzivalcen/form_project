@@ -1,0 +1,212 @@
+/* FONTS */
+@font-face {
+  font-family: "norsebold";
+  src: url("./webfontkit-20220330-190926/norse-bold-webfont.woff2")
+      format("woff2"),
+    url("./webfontkit-20220330-190926/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4 p,
+figure,
+picture {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+
+  grid-template-rows: -webkit-min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+}
+/* imgs easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Styling Starts */
+.container {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  height: 100vh;
+}
+.column1 {
+  grid-column: 1/2;
+}
+.column2 {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+/* FIRST COLUMN */
+.column1 {
+  background-image: url("./ethan-olarte-q96Xp4wbpQk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+}
+
+/* SECOND COLUMN */
+.description,
+.log {
+  background-color: #f9fafb;
+  position: relative;
+}
+.title {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 12rem;
+  max-height: 282px;
+}
+.title h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: norsebold;
+  font-size: 10rem;
+  color: white;
+}
+.title h1 > span {
+  padding: 1rem;
+}
+.photo-credits {
+  justify-self: center;
+  color: rgba(0, 0, 0, 0.658);
+  position: absolute;
+  bottom: 0;
+}
+/* ----------
+DESCRIPTION
+------------ */
+.description {
+  display: grid;
+  align-content: center;
+  font-size: 1.7em;
+  line-height: 1;
+  font-weight: bold;
+  padding-inline: 2.5em max(4em);
+}
+.despcription-p--2 {
+  margin-top: 2em;
+}
+/* FORM */
+.form h2 {
+  margin-top: 0.5em;
+  margin-left: 2.8em;
+  font-weight: bold;
+}
+.form {
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: min(8rem);
+  margin-inline: 4em max(4em);
+  margin-block: 2em;
+  max-width: 30em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.692);
+}
+.error {
+  text-transform: capitalize;
+  font-size: 0.8em;
+  color: red;
+  font-weight: lighter;
+}
+
+input {
+  width: 20em;
+  height: 2em;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  outline: none;
+  background: white !important;
+  padding: 1em;
+}
+
+#password {
+  border-color: red;
+}
+input:focus {
+  border-color: rgb(0, 88, 189);
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+#password:focus {
+  border-color: red;
+}
+.form .form-grid > * {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.7rem;
+}
+/* BUTTON */
+.log {
+  padding-left: 4em;
+  padding-top: 4em;
+}
+.log-in {
+  padding-inline: 4rem;
+  padding-block: 1rem;
+  outline: none;
+  background: #4b839c;
+  border-color: #4b839c;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 3px 10px 5px -4px rgba(0, 0, 0, 0.43);
+  transition: all 0.3s;
+}
+.log-in:hover {
+  background: #4b829cda;
+  color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+.log p {
+  padding-top: 4em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.log p > span {
+  color: #28799e;
+}
+.log p > span:hover {
+  cursor: pointer;
+}
